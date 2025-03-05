@@ -1,54 +1,52 @@
-# React + TypeScript + Vite
+# 🚀 SIGECONT - Sistema de Gestão de Contabilidade
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto faz parte do SIGECONT, um sistema para cálculo de folha de ponto, incluindo cálculos de hora extra, hora noturna e outros.
 
-Currently, two official plugins are available:
+## 📂 Como Clonar e Executar o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para iniciar o projeto localmente, siga os passos abaixo:
 
-## Expanding the ESLint configuration
+### 1️⃣ Clonar o Repositório
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Abra o terminal e execute o seguinte comando:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+git clone https://github.com/limaricardo/sigecont.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2️⃣ Entrar na Pasta do Projeto
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+cd sigecont/sigecont-web
 ```
+
+### 3️⃣ Instalar Dependências
+
+Certifique-se de ter o **Yarn** instalado e rode o seguinte comando:
+
+```sh
+yarn install
+```
+
+### 4️⃣ Executar o Projeto
+
+Para iniciar o servidor de desenvolvimento:
+
+```sh
+yarn run dev
+```
+
+## 📌 Tecnologias Utilizadas
+
+- **React** ⚛️ - Biblioteca para construção de interfaces
+- **TypeScript** 🟦 - Superset do JavaScript com tipagem estática
+- **MUI (Material-UI)** 🎨 - Biblioteca de componentes para estilização moderna e acessível
+
+## 📦 Requisitos
+
+- **Node.js**: `22.14.0`
+- **Yarn**: `>=1.22`
+
+## 📜 Licença
+
+Este projeto está sob a licença MIT.
