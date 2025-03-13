@@ -19,7 +19,7 @@ export const uploadTimeSheet = async (file: File[]): Promise<ResultadoCalculoDto
     console.log(formData)
     try {
         const res = await client.post<ResultadoCalculoDto[]>(
-            "/api/folha/importar-planilha",
+            "/api/Folha/importar-planilha",
             formData,
             {
                 headers: {
