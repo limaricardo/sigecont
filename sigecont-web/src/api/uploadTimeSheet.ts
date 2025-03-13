@@ -10,9 +10,11 @@ export interface ResultadoCalculoDto {
     totalHorasNoturnas: number;
 }
 
-export const uploadTimeSheet = async (file: File): Promise<ResultadoCalculoDto[]> => {
+export const uploadTimeSheet = async (file: File[]): Promise<ResultadoCalculoDto[]> => {
     const formData = new FormData();
-    formData.append("file", file);
+    file.forEach((item) => {
+        formData.append("file", item);
+    });
 
     console.log(formData)
     try {
