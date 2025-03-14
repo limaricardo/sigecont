@@ -3,6 +3,7 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
+import logo from '../../assets/logo.jpg';
 import { Link as RouterLink } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
 
@@ -23,7 +24,7 @@ const Navbar: React.FC = () => {
             <Toolbar sx={{ minHeight: '6vh', px: 2 }}>
                 {/* Logo à esquerda */}
                 <Box sx={{ display: 'flex', alignItems: 'center', mr: 2 }}>
-                    <img src="/logo.png" alt="Logo" style={{ height: '100%', maxHeight: '6vh' }} />
+                    <img src={logo} alt="Logo" style={{ height: '100%', maxHeight: '5vh', borderRadius: '50%' }} />
                 </Box>
                 {/* Botões de navegação */}
                 <Button color="inherit" component={RouterLink} to="/">

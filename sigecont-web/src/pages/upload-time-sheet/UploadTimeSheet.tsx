@@ -9,13 +9,14 @@ import {
   Button,
 } from '@mui/material';
 import { uploadTimeSheet } from '../../api/uploadTimeSheet';
+import DownloadTemplate from '../../components/download-template/DownloadTemplate';
 
 export interface ResultadoCalculoDto {
   nomeFuncionario: string;
   totalHorasTrabalhadas: number;
   totalHorasExtras50: number;
   totalHorasExtras100: number;
-  totalHorasNoturnas: number;
+  totalHorasNoturnasFormatado: string;
 }
 
 const UploadTimeSheet: React.FC = () => {
@@ -60,7 +61,7 @@ const UploadTimeSheet: React.FC = () => {
   };
 
   return (
-    <Box sx={{display: 'flex', flexDirection: 'column', width: '100vw', minHeight: '90vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', width: '100vw', minHeight: '90vh' }}>
       {/* Main content */}
       <Container
         sx={{
@@ -108,15 +109,19 @@ const UploadTimeSheet: React.FC = () => {
           )}
         </Box>
 
-        <Button
-          variant="contained"
-          color="error"
-          onClick={handleUpload}
-          disabled={loading}
-          sx={{ mt: 2, px: 4, py: 1.5, fontSize: '1rem', borderRadius: '8px' }}
-        >
-          {loading ? 'Enviando...' : 'Enviar'}
-        </Button>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', width: '100%', maxWidth: 600}}>
+          <Button
+            variant="contained"
+            color="error"
+            onClick={handleUpload}
+            disabled={loading}
+            sx={{ mt: 2, px: 4, py: 1.5, fontSize: '1rem', borderRadius: '8px' }}
+          >
+            {loading ? 'Enviando...' : 'Enviar'}
+          </Button>
+          <DownloadTemplate />
+
+        </Box>
 
         {files.length > 0 && (
           <Box sx={{ mt: 3, textAlign: 'left' }}>
@@ -131,6 +136,7 @@ const UploadTimeSheet: React.FC = () => {
           </Box>
         )}
       </Container>
+
     </Box>
   );
 };

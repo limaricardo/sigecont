@@ -7,7 +7,7 @@ export interface ResultadoCalculoDto {
     totalHorasTrabalhadas: number;
     totalHorasExtras50: number;
     totalHorasExtras100: number;
-    totalHorasNoturnas: number;
+    totalHorasNoturnasFormatado: string;
 }
 
 export const uploadTimeSheet = async (file: File[]): Promise<ResultadoCalculoDto[]> => {
@@ -15,8 +15,6 @@ export const uploadTimeSheet = async (file: File[]): Promise<ResultadoCalculoDto
     file.forEach((item) => {
         formData.append("file", item);
     });
-
-    console.log(formData)
     try {
         const res = await client.post<ResultadoCalculoDto[]>(
             "/api/Folha/importar-planilha",

@@ -41,7 +41,7 @@ const TimeSheetResults: React.FC = () => {
                             Horas Extras 100%: {result.totalHorasExtras100.toFixed(2)}
                         </Typography>
                         <Typography>
-                            Horas Noturnas: {result.totalHorasNoturnas.toFixed(2)}
+                            Horas Noturnas: {result.totalHorasNoturnasFormatado}
                         </Typography>
                     </ResultCard>
                 ))}
