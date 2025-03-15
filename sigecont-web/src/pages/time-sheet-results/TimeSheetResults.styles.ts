@@ -29,8 +29,25 @@ export const ResultCard = styled(Box)`
   border: 1px solid #ccc;
   border-radius: 4px;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 export const BackButton = styled(Button)`
   margin-top: 32px;
+`;
+
+export const Label = styled.span`
+  color: #666;
+  font-weight: 500;
+  min-width: 150px; 
+  display: inline-block; 
+  text-align: left;
+`;
+
+export const Value = styled.span`
+  color: #000; 
+  font-weight: bold;
+  display: inline-block;
 `;
