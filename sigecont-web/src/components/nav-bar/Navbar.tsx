@@ -33,6 +33,9 @@ const Navbar: React.FC = () => {
                 <Button color="inherit" component={RouterLink} to="/upload">
                     Upload Excel
                 </Button>
+                <Button color="inherit" component={RouterLink} to="/adicional-noturno">
+                    Adicional Noturno
+                </Button>
             </Toolbar>
         </StyledAppBar>
     );
