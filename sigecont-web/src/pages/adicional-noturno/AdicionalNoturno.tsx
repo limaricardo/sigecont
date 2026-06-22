@@ -78,7 +78,7 @@ const AdicionalNoturno: React.FC = () => {
             Novo cálculo
           </Typography>
           <Typography variant="h4" component="h1" sx={{ fontWeight: 800, mb: 1 }}>
-            Adicional noturno
+            Calculadora de Hora extra
           </Typography>
           <Typography variant="body1" sx={{ color: 'text.secondary', mb: 4, maxWidth: 720 }}>
             Informe as horas trabalhadas sem adicional noturno e as horas noturnas para obter o total calculado pela regra já existente no backend.

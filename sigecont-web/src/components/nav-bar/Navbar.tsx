@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
                     Upload Excel
                 </Button>
                 <Button color="inherit" component={RouterLink} to="/adicional-noturno">
-                    Adicional Noturno
+                    Calculadora de Hora extra
                 </Button>
             </Toolbar>
         </StyledAppBar>
